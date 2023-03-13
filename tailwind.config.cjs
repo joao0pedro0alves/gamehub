@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: "'Roboto', sans-serif"
+      },
+      backgroundImage: {
+        'game': "url(/images/background.png')"
       }
     },
   },

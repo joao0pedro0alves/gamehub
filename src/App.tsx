@@ -1,39 +1,45 @@
-import {Screen} from './components/Screen'
-import {Header} from './components/Header'
+import { VideoBackground } from './components/VideoBackground'
 
-import vitePwa from './assets/images/vite-pwa.png'
+import kratos from './assets/games/kratos.png'
+import atreus from './assets/games/atreus.png'
+import logoImage from './assets/games/logo.png'
 
 export default function App() {
     return (
-        <Screen>
-            <Header />
+        <main className="flex relative w-full h-full">
+            <VideoBackground />
 
-            <main 
-                className='p-4 flex-1 flex flex-col items-center justify-center gap-4'
-            >
-                <img 
-                    src={vitePwa} 
-                    alt="Logo Vite PWA"
-                />
-
-                <p className='text-center text-lg text-gray-500'>
-                    Template desenvolvido para aplicações web/mobile sem a utilização de código nativo.
-                </p>
-
-                <p className='underline text-center text-gray-500'>
-                    Customize seu aplicativo accessando src/App.tsx
-                </p>
-
+            <section className="overflow-hidden grid grid-cols-2 items-center container m-auto h-screen justify-center p-4 z-20">
                 <div>
+                    <img
+                        className="max-w-md"
+                        src={logoImage}
+                        alt="Logotipo God Of War 2018"
+                    />
 
+                    <p className='text-lg mt-4'>
+                        Pela primeira vez na série, há dois protagonistas
+                        principais: Kratos, o antigo deus da guerra grego que é
+                        acompanhado por seu jovem filho Atreus. Após a morte da
+                        segunda esposa de Kratos e mãe de Atreus, eles viajam para
+                        cumprir sua promessa de espalhar suas cinzas no pico mais
+                        alto dos nove reinos.
+                    </p>
                 </div>
-            </main>
 
-            <footer className='p-4 text-center bg-gray-100'>
-                <span className='text-gray-700'>
-                    Feito com ❤️ por João Alves, v{import.meta.env.PACKAGE_VERSION}
-                </span>
-            </footer>
-        </Screen>
+                <div className='flex justify-end'>
+                    <img 
+                        src={kratos} 
+                        alt="Kratos"
+                        className='max-h-[600px]'
+                    />
+                    <img 
+                        src={atreus} 
+                        alt="Atreus"
+                        className='max-h-[600px]'
+                    />
+                </div>
+            </section>
+        </main>
     )
 }
